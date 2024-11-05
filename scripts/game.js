@@ -18,31 +18,30 @@ function displayCard(cardToDisplay) {
 
             // const firstCardColor = getComputedStyle(clickedCards[0]).backgroundColor;
             // const secondCardColor = getComputedStyle(clickedCards[1]).backgroundColor;
-            const firstID = clickedCards[0].id
-            const secondID = clickedCards[1].id
+            const firstID = clickedCards[0].id;
+            const secondID = clickedCards[1].id;
 
             setTimeout(() => {
                 if (firstID === secondID) {
-                    checkWin(cards);    
                     wonCards = wonCards.concat(clickedCards)
+                    checkWin(cards);
                 } else {
                     for (let clickedCard of clickedCards) {
                         clickedCard.classList.toggle("flip");
                     }
                 }
                 clickedCards = [];
-            }, 1000);
-
+            }, 900);
         }
     }
 }
-function checkWin(allCards){
+function checkWin(allCards) {
     wonStatus = true;
-    for(let card of allCards){
-        if (card.classList.contains("flip")){
+    for (let card of allCards) {
+        if (card.classList.contains("flip")) {
             wonStatus = false;
             break;
         }
     }
-    if(wonStatus) alert("Game Cleared!! You Won !!!")
+    if (wonStatus) { alert("Game Cleared!! You Won !!!"); }
 }
