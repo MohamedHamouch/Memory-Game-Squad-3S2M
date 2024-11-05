@@ -13,6 +13,25 @@ h1{
     left: 20px;
     top: 45%; 
 }
+.rick-morty-button {
+    position: absolute;
+    bottom: 20px; 
+    right: 20px; 
+    padding: 15px 25px;
+    background-color: #00BFFF;
+    color: #FFF;
+    font-family: 'Arial', sans-serif;
+    font-size: 20px; /* Font size */
+    text-decoration: none; 
+    border-radius: 5px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s; 
+}
+
+.rick-morty-button:hover {
+    background-color: #FF4500;
+}
+
 #container {
     width: 100%;
     margin: auto;
